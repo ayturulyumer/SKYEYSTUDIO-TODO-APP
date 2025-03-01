@@ -22,7 +22,7 @@ export default function TaskForm() {
             {!isOpen ? (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="w-full bg-white dark:bg-gray-800 shadow-md rounded-lg px-4 py-3 flex items-center justify-center text-green-500 hover:bg-gray-50 dark:hover:bg-black/50 transition-colors duration-200"
+                    className="w-full bg-white dark:bg-gray-800 shadow-md rounded-lg px-4 py-3 flex items-center justify-center text-blue-500 hover:bg-gray-50 dark:hover:bg-black/50 transition-colors duration-200"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ export default function TaskForm() {
                                 type="submit"
                                 className="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
                             >
-                                Add Task
+                                Add Task 
                             </button>
                         </form>
                     </div>
