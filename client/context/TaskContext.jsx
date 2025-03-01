@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext, useMemo } from "react"
 import { useTaskReducer } from "../reducers/useTaskReducer.jsx"
 
 
@@ -14,7 +14,7 @@ export function TaskProvider({ children }) {
             if (state.filter === "completed") return task.completed;
             return true;
         });
-    }, [state.tasks, state.filter]); 
+    }, [state.tasks, state.filter]);
 
     const addTask = (text, description) => {
         if (text.trim()) {
