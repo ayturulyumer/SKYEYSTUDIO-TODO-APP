@@ -1,7 +1,7 @@
 import { useReducer, useEffect } from "react";
 
 const initialState = {
-  tasks: [],
+  tasks: JSON.parse(localStorage.getItem("tasks")) || [],
   filter: "all",
 };
 
@@ -24,13 +24,6 @@ const taskReducer = (state, action) => {
 
 export function useTaskReducer() {
   const [state, dispatch] = useReducer(taskReducer, initialState);
-
-  useEffect(() => {
-    const savedTasks = localStorage.getItem("tasks");
-    if (savedTasks) {
-      dispatch({ type: "SET_TASKS", payload: JSON.parse(savedTasks) });
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(state.tasks));

@@ -4,7 +4,6 @@ import { useTaskContext } from "../context/TaskContext.jsx"
 
 export default function TaskItem({ task }) {
     const { toggleTask, deleteTask } = useTaskContext()
-    console.log(task)
 
     return (
         <div className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">

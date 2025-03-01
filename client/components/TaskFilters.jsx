@@ -3,6 +3,7 @@ import { useTaskContext } from "../context/TaskContext.jsx"
 export default function TaskFilters() {
     const { filter, setFilter, tasks } = useTaskContext()
 
+    const allCount = tasks.length
     const activeCount = tasks.filter((task) => !task.completed).length
     const completedCount = tasks.filter((task) => task.completed).length
 
@@ -16,7 +17,7 @@ export default function TaskFilters() {
                         : "bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
                         }`}
                 >
-                    All ({tasks.length})
+                    All ({allCount})
                 </button>
                 <button
                     onClick={() => setFilter("active")}
