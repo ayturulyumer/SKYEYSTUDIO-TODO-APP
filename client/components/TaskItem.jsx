@@ -6,11 +6,11 @@ export default function TaskItem({ task }) {
     const { toggleTask, deleteTask } = useTaskContext()
 
     return (
-        <div className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+        <div className="p-4 hover:bg-gray-50 rounded-2xl dark:hover:bg-black/50   transition-colors duration-150">
       <div className="flex items-start">
         <button
           onClick={() => toggleTask(task.id)}
-          className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-colors duration-200 ${
+          className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-colors duration-200 cursor-pointer ${
             task.completed ? "bg-green-500 border-green-500" : "border-gray-300 dark:border-gray-500"
           }`}
         >
@@ -49,7 +49,7 @@ export default function TaskItem({ task }) {
         </div>
         <button
           onClick={() => deleteTask(task.id)}
-          className="ml-2 p-1 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors duration-200"
+          className="ml-2 p-1 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors duration-200 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
