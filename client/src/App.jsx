@@ -1,8 +1,11 @@
+import { TaskProvider } from "../context/TaskContext.jsx"
 import Main from "../pages/Main.jsx"
 
 function App() {
   return (
-    <Main />
+    <TaskProvider>
+      <Main />
+    </TaskProvider>
   )
 }
 
