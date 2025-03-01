@@ -1,12 +1,8 @@
-import { useState } from 'react'
-
-
+import Main from "../pages/Main.jsx"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='text-9xl'>IS IT WORKING BRUH</div>
+    <Main />
   )
 }
 
