@@ -7,12 +7,14 @@ const TaskContext = createContext()
 export function TaskProvider({ children }) {
     const { state, dispatch } = useTaskReducer()
 
-    // Filter tasks based on current filter
-    const filteredTasks = state.tasks.filter((task) => {
-        if (state.filter === "active") return !task.completed
-        if (state.filter === "completed") return task.completed
-        return true
-    })
+    //  Filter tasks based on current filter 
+    const filteredTasks = useMemo(() => {
+        return state.tasks.filter((task) => {
+            if (state.filter === "active") return !task.completed;
+            if (state.filter === "completed") return task.completed;
+            return true;
+        });
+    }, [state.tasks, state.filter]); 
 
     const addTask = (text, description) => {
         if (text.trim()) {
@@ -36,7 +38,6 @@ export function TaskProvider({ children }) {
     return (
         <TaskContext.Provider
             value={{
-                tasks: state.tasks,
                 filteredTasks,
                 filter: state.filter,
                 addTask,
