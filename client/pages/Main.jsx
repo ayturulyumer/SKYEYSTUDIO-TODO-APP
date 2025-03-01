@@ -1,4 +1,6 @@
 import TaskForm from "../components/TaskForm.jsx";
+import TaskList from "../components/TaskList.jsx";
+import TaskFilters from "../components/TaskFilters.jsx";
 
 export default function Main() {
     return (
@@ -7,6 +9,8 @@ export default function Main() {
                 <div className="p-6">
                     <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">Todo App</h1>
                     <TaskForm />
+                    <TaskFilters />
+                    <TaskList />
                 </div>
             </div>
         </div>
