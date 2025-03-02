@@ -3,9 +3,9 @@ import { useTaskContext } from "../context/TaskContext.jsx"
 export default function TaskFilters() {
     const { filter, setFilter, tasks } = useTaskContext()
 
-    const allCount = tasks?.length
-    const activeCount = tasks?.filter((task) => !task.completed).length
-    const completedCount = tasks?.filter((task) => task.completed).length
+    const allCount = tasks.length
+    const activeCount = tasks.filter((task) => !task.completed).length
+    const completedCount = tasks.filter((task) => task.completed).length
 
     return (
         <div className="mb-6">
