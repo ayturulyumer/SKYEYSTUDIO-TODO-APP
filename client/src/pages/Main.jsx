@@ -1,5 +1,5 @@
 import TaskForm from "../components/TaskForm.jsx";
-import TaskList from "../components/TaskList.jsx";
+import TaskList from "../components/TaskList.jsx"
 import TaskFilters from "../components/TaskFilters.jsx";
 
 export default function Main() {

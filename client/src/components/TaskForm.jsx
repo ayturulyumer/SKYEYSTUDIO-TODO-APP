@@ -22,7 +22,7 @@ export default function TaskForm() {
             {!isOpen ? (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="w-full bg-white dark:bg-gray-800 shadow-md rounded-lg px-4 py-3 flex items-center justify-center text-blue-500 hover:bg-gray-50 dark:hover:bg-black/50 transition-colors duration-200"
+                    className="w-full bg-white dark:bg-gray-800 shadow-md rounded-lg px-4 py-3 flex items-center justify-center cursor-pointer text-blue-500 hover:bg-gray-50 dark:hover:bg-black/50 transition-colors duration-200"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

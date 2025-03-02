@@ -1,5 +1,3 @@
-"use client"
-
 import { useTaskContext } from "../context/TaskContext.jsx"
 import TaskItem from "./TaskItem.jsx"
 import EmptyTaskList from "./EmptyTaskList.jsx"
