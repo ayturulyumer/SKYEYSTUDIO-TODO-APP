@@ -38,6 +38,7 @@ export function TaskProvider({ children }) {
     return (
         <TaskContext.Provider
             value={{
+                tasks: state.tasks,
                 filteredTasks,
                 filter: state.filter,
                 addTask,
